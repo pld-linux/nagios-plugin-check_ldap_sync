@@ -8,6 +8,7 @@ License:	GPL v2
 Group:		Networking
 Source0:	https://secure.opsera.com/svn/opsview/trunk/opsview-core/nagios-plugins/check_ldap_sync
 # Source0-md5:	c7a95aa75b929e032319defdf605cba0
+Source1:	%{plugin}.cfg
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	nagios-common
 BuildArch:	noarch
@@ -27,7 +28,6 @@ Nagios plugin to check that specified LDAP servers are synchronised.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{plugindir}}
 install -p %{plugin} $RPM_BUILD_ROOT%{plugindir}/%{plugin}
-cp -p %{plugin}.cfg $RPM_BUILD_ROOT%{_sysconfdir}/%{plugin}.cfg
 cp -p %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/%{plugin}.cfg
 
 %clean
