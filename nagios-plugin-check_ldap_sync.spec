@@ -1,5 +1,4 @@
 %define		plugin	check_ldap_sync
-%include	/usr/lib/rpm/macros.perl
 Summary:	Nagios plugin to check LDAP servers are synchronization
 Name:		nagios-plugin-%{plugin}
 Version:	0.1
